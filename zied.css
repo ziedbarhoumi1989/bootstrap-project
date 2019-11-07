@@ -1,0 +1,36 @@
+body{
+	background-image:  url(ggg.png)  ;
+	background-size: cover;
+	
+}
+label{
+	display:block;
+	
+	width:150px;
+    text-align:left;
+   padding:0 50px 0 0
+   vertical-align: top;
+	
+}
+input{
+	border-radius: 10px;
+	width: 249px;
+	
+}
+#slt{
+	border-radius: 10px;
+}
+#start{
+	width: 249px;
+	
+}
+
+#start:hover{
+
+    color: green;
+    font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;
+
+}

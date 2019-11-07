@@ -29,7 +29,31 @@ function checkTraction(material,force) {
 
 
 }
+function checkFlexion() {
 
-function checkFlexion(material,force) {
-	
 }
+$('select').on("change",function(){
+      if($(this).val()==1) {
+      	$('form').append('<label>length:<input type=\'number\'></label><br><label>width:<input type=\'number\'></label>')
+      }
+      if($(this).val()==2) {
+      	$('form').append('<label>raduis:<input type=\'number\'></label>')
+      }
+          
+});
+var $selected=$("select option").val();
+console.log ($selected)
+if($selected ==='rectangle') {
+	
+} 
+if($selected==='circle') {
+	$('form').append('<label>raduis:<input type=\'number\'></label>')
+} 
+
+$('#section2').hide();
+$('button#start').on('click',function(){
+	//checkTraction(silver,50)
+	$('#section1').hide("slow");
+	$('#section2').show("fast");
+
+})
