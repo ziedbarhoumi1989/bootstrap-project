@@ -12,12 +12,11 @@
 	<button id="start">start</button>
 	</section>
 	<section id='section2'>
-		<button> test</button>
-		<button> reset</button>
+		
 		<article>
-			<form>
-				<label> Name: <input type="text" name=""></label><br>
-				<label> Color: <input type="text" name=""></label><br>
+			
+				<label> Name: <input type="text" name="" required=></label><br>
+				<label> Color: <input type="text" name=""required></label><br>
 				<label> Form: <select id='slt'>
 					             
 					               <option value="1" selected> Rectangle</option>
@@ -27,14 +26,33 @@
 
 				 </label>
 				 <br>
-				<label> Elastic Modulus: <input type="number" name=""></label><br>
-				<label> Shear Modulus: <input type="number" name=""></label><br>
-				<label> Poisson Ratio: <input type="number" name=""></label><br>
-				<label> Limit Stress: <input type="number" name=""></label><br>
-				<input type="submit" name="" value="OK">
-			</form>
+				<label> Elastic Modulus: <input type="number" name="" required></label><br>
+				<label> Shear Modulus: <input type="number" name="" required></label><br>
+				<label> Poisson Ratio: <input type="number" name="" required></label><br>
+				<label> Limit Stress: <input type="number" name="" required></label><br>
+				<input type="submit" name="" value="Choose the test" id="choose">
+			
 		</article>
+		
 	</section>
+	<section id="section3">
+			<button id="test1">Traction/compression</button>
+			<button id="test2">flexion</button>
+			<button id="test3">torsion</button>
+			<button id="test4">Other</button>
+			<div id="pieceContainer">
+				
+				<div id="piece"></div>
+				<div class=" cylinder rectangle" id='piece1'></div>
+			</div>
+			<div id="traction">
+				
+				<img src="traction-test.png" id='image1'>
+				
+		    </div>
+	</section>
+
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="zied.js"></script>
 </body>

@@ -34,3 +34,65 @@ input{
     border-radius: 10px;
 
 }
+#section3 {
+	border:3px groove green;
+	padding:50px;
+}
+#pieceContainer {
+	width:80%;
+	height:50%;
+	border: 5px solid red;
+	color:blue;
+	display: flex;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:50px;
+	padding:50px;
+}
+#piece {
+	width:30%;
+	height:20%;
+	padding:30px;
+	background-color:green;
+	display: inline block;
+	border: 2px solid yellow;
+	margin-left: auto;
+}
+.rectangle {
+	width:50px;
+	height:90px;
+	display: inline-block;
+	border: 2px solid yellow;
+	
+}
+#piece1 {
+
+	background-color:green;
+	margin-left: 80px;
+}
+.cylinder {
+	width:60px;
+	height:60px;
+	display: inline-block;
+	border: 2px solid yellow;
+	border-radius: 50%
+	
+}
+#traction {
+	width:80%;
+	height:50%;
+	border: 5px solid red;
+	color:blue;
+	/*display: flex;*/
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:50px;
+	border: 2px dashed purple;
+	overflow: auto;
+	
+}
+#image1 {
+	width:200px;
+	height:auto;
+	float:right;
+}
