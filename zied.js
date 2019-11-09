@@ -23,12 +23,15 @@ var stress= Number($('#userInputStress').val());
 var userInput = material(name,elastic,poisson,stress) ;
 var chosenMaterial={};
 var form;
+var $length=$('<label>length<input type="number" min="0" id="length"></label>');
+var $width=$('<label>width<input type="number" min="0" id="width"></label>');
+var $raduis=$('<label>raduis<input type="number" min="0" id="raduis"></label>');
 var length=$('#length').val();
 var width=$('#width').val();
-var raduis=$('#raduis').val();
+// var raduis=$('#raduis').val();
 var torque;
 
-$("form button").on('click',function(){
+$("div button").on('click',function(){
 	
 	 var fired_button = $(this).text();
 	 console.log(fired_button)
@@ -41,6 +44,7 @@ $("form button").on('click',function(){
 	}
 
 })
+
 console.log(chosenMaterial)
 var toBeTested=userInput ||chosenMaterial;
 
@@ -73,9 +77,7 @@ $Elastic.hide();
 $Shear.hide();
 $Poisson.hide();
 $stress.hide();
-var $length=$('<label>length<input type="number" min="0" id="length"></label>');
-var $width=$('<label>width<input type="number" min="0" id="width"></label>');
-var $raduis=$('<label>raduis<input type="number" min="0" id="raduis"></label>');
+
 $('#section2').append($length);
 $('#section2').append($width);
 $('#section2').append($raduis);
@@ -100,7 +102,7 @@ function checkTractionOrCompression() {
 		  }else alert("sorry you can't do that")
 	}
 	if(material.form==="circle"){
-		 var raduis=window.prompt("Specify the raduis")
+		 var load=window.prompt("Specify load")
 		 if((force/(Math.PI*raduis*raduis)<=material.limitStress)){
 		 	alert('you can use it')
 		 } else alert("sorry you can't do that")
@@ -112,8 +114,8 @@ function checkTractionOrCompression() {
 function checkFlexion() {
 	var geometry
 	if(form==="rectangle"){
-		 //var length=window.prompt("Specify the length")
-		 //var width=window.prompt("Specify the width")
+		 var length=window.prompt("Specify the length")
+		var width=window.prompt("Specify the width")
 		 var bendingValue=window.prompt("Specify the bending value")
 		  var bendingPosition=window.prompt("Specify the bending positionS")
 		  geometry=Math.pow(length,3)*width/12
@@ -123,7 +125,7 @@ function checkFlexion() {
 		  }else alert("sorry you can't do that")
 	}
 	if(form==="circle"){
-		 //var raduis=window.prompt("Specify the raduis")
+		var raduis=window.prompt("Specify the raduis")
 		 var bendingValue=window.prompt("Specify the bending value")
 		 var bendingPosition=window.prompt("Specify the bending positionS")
 		 geometry=(Math.PI*Math.pow(raduis,4)/12)
@@ -133,12 +135,15 @@ function checkFlexion() {
 	}
 
 }
-$('#flex').on("click",function(){
-	checkFlexion()
-})
-function checkSheer(material){
+;
+//example:
+$('#choose').on('click', function(){
+	$('#section2').hide();
+	var raduis=$('#raduis').val()
+	console.log(raduis)
+	$('#section3').show();
 
-}
+})
 function checkTorsion() {
 
 	var geometry
@@ -154,24 +159,29 @@ function checkTorsion() {
 		 } else alert("sorry you can't do that")
 	}
 }
-$('#test3').on('click',function () {
-	checkTorsion(silver,250000)
-})
+
 $('#flexion').hide()
 $('#traction').hide()
 $('#torsion').hide()
+
 $('#flex').on('click',function(){
+	var rad = raduis
+	console.log(rad)
+	checkFlexion()
 	$('#flexion').show()
 	$('#traction').hide()
     $('#torsion').hide()
 })
 
 $('#trac').on('click',function(){
+	checkTractionOrCompression()
 	$('#flexion').hide()
 	$('#traction').show()
     $('#torsion').hide()
 })
+
 $('#tor').on('click',function(){
+	checkTorsion()
 	$('#flexion').hide()
 	$('#traction').hide()
     $('#torsion').show()
@@ -196,13 +206,7 @@ $('select').on("change",function(){
           
 });
 $('#section3').hide();
-$('#choose').on('click', function(){
-	$('#section2').hide();
-	var raduis=$('#raduis').val();
 
-	$('#section3').show();
-
-})
 
 
 var $selected=$("select option").val();
@@ -215,7 +219,7 @@ if($selected==='circle') {
 } 
 
 $('#section2').hide();
-//console.log(typeof($('input type="number"')))
+
 
 $('button#start').on('click',function(){
 	
