@@ -112,8 +112,8 @@ function checkTractionOrCompression() {
 function checkFlexion() {
 	var geometry
 	if(form==="rectangle"){
-		 //var length=window.prompt("Specify the length")
-		 //var width=window.prompt("Specify the width")
+		var length=window.prompt("Specify the length")
+		 var width=window.prompt("Specify the width")
 		 var bendingValue=window.prompt("Specify the bending value")
 		  var bendingPosition=window.prompt("Specify the bending positionS")
 		  geometry=Math.pow(length,3)*width/12
@@ -123,7 +123,7 @@ function checkFlexion() {
 		  }else alert("sorry you can't do that")
 	}
 	if(form==="circle"){
-		 //var raduis=window.prompt("Specify the raduis")
+		 var raduis=window.prompt("Specify the raduis")
 		 var bendingValue=window.prompt("Specify the bending value")
 		 var bendingPosition=window.prompt("Specify the bending positionS")
 		 geometry=(Math.PI*Math.pow(raduis,4)/12)
@@ -161,17 +161,20 @@ $('#flexion').hide()
 $('#traction').hide()
 $('#torsion').hide()
 $('#flex').on('click',function(){
+	checkFlexion();
 	$('#flexion').show()
 	$('#traction').hide()
     $('#torsion').hide()
 })
 
 $('#trac').on('click',function(){
+	checkTractionOrCompression()
 	$('#flexion').hide()
 	$('#traction').show()
     $('#torsion').hide()
 })
 $('#tor').on('click',function(){
+	checkTorsion()
 	$('#flexion').hide()
 	$('#traction').hide()
     $('#torsion').show()
