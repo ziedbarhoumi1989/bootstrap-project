@@ -9,45 +9,78 @@
 	<section id="section1">
 	<h1>Welcome!! </h1>
 	<h1>This application will help you ensure your material will resist the load or not</h1>
-	<button id="start">start</button>
+	<h2>Definition:</h2>
+	<p>In mechanics of materials, the strength of a material is its ability to withstand an applied load without failure or plastic deformation. The field of strength of materials deals with forces and deformations that result from their acting on a material. A load applied to a mechanical member will induce internal forces within the member called stresses when those forces are expressed on a unit basis. The stresses acting on the material cause deformation of the material in various manners including breaking them completely. Deformation of the material is called strain when those deformations too are placed on a unit basis. </p>
+	<button id="start">Start</button>
 	</section>
+	
 	<section id='section2'>
+		<form>
+			<button id="ir">iron</button>
+			<button id="st10">steelXC10</button>
+			<button id="st32">steelC32</button>
+			<button id="st45">steelC45</button>
+			<br>
+			<button id="stcd">steel35NCD</button>
+			<button id="st45sd">steel45SCD</button>
+			<button id="al">aliminuim</button>
+			<button id="co">copper</button>
+			<br>
+			<button id="br">brass</button>
+			<button id="mg">magnesuim</button>
+			<button id="zn">zinc</button>
+			<button id="nk">nickel</button>
+		</form>
+		<br>
+		<button id="other">other</button>
+		
 		
 		<article>
 			
-				<label> Name: <input type="text" name="" required=></label><br>
-				<label> Color: <input type="text" name=""required></label><br>
+				<label id="name"> Name: <input type="text" name="" required id="userInputName"></label><br>
 				<label> Form: <select id='slt'>
-					             
-					               <option value="1" selected> Rectangle</option>
+									<option value="0" > Choose</option>
+					               <option value="1" > Rectangle</option>
 					               <option value="2"> Circle</option>
 					             
 				              </select>
 
 				 </label>
 				 <br>
-				<label> Elastic Modulus: <input type="number" name="" required></label><br>
-				<label> Shear Modulus: <input type="number" name="" required></label><br>
-				<label> Poisson Ratio: <input type="number" name="" required></label><br>
-				<label> Limit Stress: <input type="number" name="" required></label><br>
-				<input type="submit" name="" value="Choose the test" id="choose">
+				<label id="Elastic"> Elastic Modulus: <input type="number" name="" required id='userInputElastic' ></label><input type="submit" name="" value="Choose the test" id="choose" ><br>
+				<label id='Shear'> Shear Modulus: <input type="number" name="" required id='userInputShear'></label><br>
+				<label id='Poisson'> Poisson Ratio: <input type="number" name="" required id='userInputPoisson' ></label><br>
+				<label id="stress"> Limit Stress: <input type="number" name="" required id='userInputStress'></label><br>
+				
 			
 		</article>
 		
 	</section>
 	<section id="section3">
-			<button id="test1">Traction/compression</button>
-			<button id="test2">flexion</button>
-			<button id="test3">torsion</button>
-			<button id="test4">Other</button>
+			<button id="test4"><==</button>
+			<button id="trac">Traction/Compression</button>
+			<button id="flex">Flexion</button>
+			<button id="tor">Torsion</button>
+			
 			<div id="pieceContainer">
+				<div>
+					<img id="materialForm" src="">
+				</div>
 				
-				<div id="piece"></div>
-				<div class=" cylinder rectangle" id='piece1'></div>
 			</div>
 			<div id="traction">
-				
+				<img src="courbetrac.png" id="image0">
 				<img src="traction-test.png" id='image1'>
+				
+		    </div>
+		    <div id="torsion">
+				<img src="torsion.jpg" id="image0">
+				
+				
+		    </div>
+		    <div id="flexion">
+				
+				<img src="flexion.png" id='image1'>
 				
 		    </div>
 	</section>

@@ -3,6 +3,20 @@ body{
 	background-size: cover;
 	
 }
+button{
+	width: 200px;
+	color:red;
+    font-size: 18px;
+    padding:10px;
+}
+p{
+	font-size: 20px;
+
+}
+#other{
+	width: 812px;
+	font-size: 22px;
+}
 label{
 	display:block;
 	
@@ -12,17 +26,33 @@ label{
    vertical-align: top;
 	
 }
+#choose{
+	width: 200px;
+	margin-left:350px;
+	margin-right:750px;
+	font-size: 20px;
+	color:red;
+	padding: 10px;
+}
+#choose:hover{
+
+    font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;
+}
 input{
 	border-radius: 10px;
 	width: 249px;
-	
-}
+	}
 #slt{
 	border-radius: 10px;
 }
 #start{
+	font-size: 24px;
 	width: 249px;
-	
+	margin-left:500px;
+	margin-right:500px;
 }
 
 #start:hover{
@@ -35,13 +65,13 @@ input{
 
 }
 #section3 {
-	border:3px groove green;
+	
 	padding:50px;
 }
 #pieceContainer {
 	width:80%;
-	height:50%;
-	border: 5px solid red;
+	height:80%;
+	/*border: 5px solid red;*/
 	color:blue;
 	display: flex;
 	margin-right:auto;
@@ -81,13 +111,13 @@ input{
 #traction {
 	width:80%;
 	height:50%;
-	border: 5px solid red;
+	/*border: 5px solid red;
 	color:blue;
 	/*display: flex;*/
 	margin-right:auto;
 	margin-left:auto;
 	margin-top:50px;
-	border: 2px dashed purple;
+	/*border: 2px dashed purple;*/
 	overflow: auto;
 	
 }
@@ -96,3 +126,32 @@ input{
 	height:auto;
 	float:right;
 }
+#flexion{
+	width:500px;
+	height:500px;
+}
+#test4{
+	margin-left:200px;
+}
+#test4:hover{
+
+    font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;
+}
+#trac{}
+#trac:hover{font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;}
+#flex{}
+#flex:hover{font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;}
+#tor{}
+#tor:hover{font-weight: bold;
+    background-color: white;
+    
+    border-radius: 10px;}
